@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Switching</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .hiddenImage{
+            display: none;
+        }
+        .current-tab {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="overflow-y-hidden h-lvh bg-amber-50">
+
+        <div class="flex justify-around bg-gradient-to-r from-cyan-500 to-blue-500">
+            <h1 onclick="switchTab(this, document.getElementById('image1'))" class="tab1 cursor-pointer text-xl  hover:scale-105 ">CLOUD</h1>
+            <h1 onclick="switchTab(this, document.getElementById('image2'))" class="tab2 cursor-pointer text-xl  hover:scale-105 ">LOADING</h1>
+            <h1 onclick="switchTab(this, document.getElementById('image3'))" class="tab3 cursor-pointer text-xl  hover:scale-105 ">WIND</h1>
+        </div>
+        
+        <div class="flex justify-center items-center h-full">
+            <img  id="image1" src="assets/cloud.png" alt="cloud image" height="200px" width="200px">
+            <img  id="image2" src="assets/loading.gif" alt="lading image" height="200px" width="200px">
+            <img  id="image3" src="assets/wind.png" alt="wind image" height="200px" width="200px">
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
